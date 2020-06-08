@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+        <script src="{{ url_for('static', filename='index.js') }}"></script> 
+        <style>
+           
+            #grid{
+                border: 1px black solid;
+                overflow-y: scroll;
+                min-width: 100px;
+                height: 300px;
+            }
+
+            .msg{
+                
+            }
+        </style> 
+        
+       
+    </head>
+    <body>
+        <h1 id="name"></h1>
+        
+
+        <input type="text" placeholder="Enter channel's name" id="channelname">
+        <button id="createchannel">Create!</button>
+
+    </br>
+<ul id ="channellist">Channels
+      <!--  {% for channel in channels %} -->
+     <!--  <li class="cc" ><button class="channels">{{ channel }} </button></li> --> 
+
+       <!-- {% endfor %} -->
+</ul>
+
+
+<h1 id="cchannel">{{ currentchannel }} </h1>
+<div id="grid">
+    
+</div>
+
+<input type="text" placeholder="Enter your message here" id="message">  </input>
+<button id="sendmessage">Send</button>
+
+</body>
+</html>
